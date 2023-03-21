@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="fondo-quiz">
+    <div class="row">
+        <div class="col-12">
+            <div class="quix-box custom-box" *ngIf="!mostrarResultados">
+                <div class="question-number">
+                    Pregunta: {{contadorPreguntas + 1}}/{{preguntas.length}}
+                    <span style="float:right;">{{formatoMinutos}}:{{formatoSegundos}}</span>
+                </div>
+                <div class="question-flag d-flex justify-content-center mt-3">
+                    <img src="{{preguntas[contadorPreguntas].bandera}}" alt="">
+                </div>
+                <div class="question-text" style="text-align: justify;">{{preguntas[contadorPreguntas]!.pregunta}}</div>
+                <div class="option-container">
+                    <div style="text-align: justify;" *ngFor="let pregunta of preguntas[contadorPreguntas]?.opciones; let i = index" id="0" class="option" (click)="mostrarClase(i)">
+                        {{pregunta}}
+                    </div>
+                    
+                </div>
+
+                <div class="d-flex justify-content-center mb-3">
+                    <button type="button" [disabled]="botonDesactivado" (click)="siguientePregunta()" class="btn btn-primary">
+                        {{textoBoton}}
+                    </button>
+                </div>
+
+                <div class="answers-indicator d-flex justify-content-center">
+                    <div *ngFor="let pregunta of preguntas; let i = index">
+                        {{i + 1}}
+                    </div>
+
+                </div>
+            </div>
+            <div class="result-box custom-box" *ngIf="mostrarResultados">
+                <h1>Resultados</h1>
+                <table>
+                    <tr>
+                        <td>Preguntas en Total</td>
+                        <td>{{preguntas.length}}</td>
+                    </tr>
+                    <tr>
+                        <td>Preguntas Correctas</td>
+                        <td>{{respuestasCorrectas}}</td>
+                    </tr>
+                    <tr>
+                        <td>Preguntas Incorrectas</td>
+                        <td>{{preguntas.length - respuestasCorrectas}}</td>
+                    </tr>
+                    <tr>
+                        <td>Tiempo</td>
+                        <td>{{formatoMinutos}}:{{formatoSegundos}}</td>
+                    </tr>
+                </table>
+                <div>
+                    <button class="btn btn-primary" (click)="irPagina('/quiz/tabla-posiciones')">Ver Ranking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

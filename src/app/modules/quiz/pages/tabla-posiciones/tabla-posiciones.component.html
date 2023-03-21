@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="fondo-quiz">
+  <div><h1 class="text-center pt-5 mb-4">Tabla de Posiciones</h1></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="table-responsive bg-white">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th class="text-center" scope="col">POSICIÓN</th>
+                <th class="text-center" scope="col">USUARIO</th>
+                <th class="text-center" scope="col">CORREO</th>
+                <th class="text-center" scope="col">PREGUNTAS CORRECTAS</th>
+                <th class="text-center" scope="col">TIEMPO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let posicion of listaPosiciones; let i = index">
+                <th class="text-center" scope="row">
+                  {{ i + 1 }}
+                  <img
+                    *ngIf="i + 1 == 1"
+                    src="assets/images/medalla-oro.png"
+                    alt="medalla"
+                  />
+                  <img
+                    *ngIf="i + 1 == 2"
+                    src="assets/images/medalla-plata.png"
+                    alt="medalla"
+                  />
+                  <img
+                    *ngIf="i + 1 == 3"
+                    src="assets/images/medalla-bronce.png"
+                    alt="medalla"
+                  />
+                </th>
+                <td class="text-center">{{ posicion.usuario.username }}</td>
+                <td class="text-center">{{ posicion.usuario.email }}</td>
+                <td class="text-center">{{ posicion.preguntas_acertadas }}</td>
+                <td class="text-center">{{ posicion.tiempo }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

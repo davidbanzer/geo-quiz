@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="fondo-quiz">
+    <div class="list-group">
+        <a (click)="irPagina(opcion.ruta)" class="list-group-item list-group-item-action" 
+        *ngFor="let opcion of menu; let i = index"
+        [class.active]="opcionSeleccionada === i" 
+        (click)="setIndex(i)">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{opcion.titulo}}</h5>
+          </div>
+          <p class="mb-1">{{opcion.descripcion}}</p>
+        </a>
+      </div>
+</div>

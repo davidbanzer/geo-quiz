@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.fondo-quiz{
+    background-image: url("/assets/images/fondo-quiz.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-primary{
+    background-color: brown !important;
+    border-color: brown !important;
+}
+.form-control.ng-invalid.ng-touched{
+    border-color: red !important;
+}
+.form-select.ng-invalid.ng-touched{
+    border-color: red !important;
+}

@@ -1,0 +1,29 @@
+
+.slide{
+    width: 800px;
+    height: 500px;
+}
+img{
+    width: 800px !important;
+    height: 500px !important;
+    object-fit: cover;
+}
+h5{
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+}
+p{
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+}
+.carousel-control-next-icon{
+    background-color: brown;
+}
+.carousel-control-prev-icon{
+    background-color: brown;
+}
+.carousel-control-next{
+    right: -100px;
+}
+.carousel-control-prev{
+    left: -100px;
+}
+.brightness { filter: brightness(0.75); }

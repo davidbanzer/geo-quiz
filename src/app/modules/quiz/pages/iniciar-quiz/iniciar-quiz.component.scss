@@ -1,0 +1,116 @@
+.fondo-quiz{
+    display: block;
+}
+.row{
+    --bs-gutter-x: 0px
+}
+img{
+    width: 150px;
+    object-fit: contain;
+}
+.custom-box{
+    width: 80%;
+    background-color: white;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.quix-box .question-number{
+    font-size: 18px;
+    color: brown;
+    font-weight: 600;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+
+
+}
+.quix-box .question-text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.quix-box .option-container .option {
+    background-color: #cccccc;
+    padding: 10px;
+    line-height: 22px;
+    color: black;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    text-transform: capitalize;
+    opacity: 1;
+    animation: fadeIn 0.3s ease forwards;
+    overflow: hidden;
+}
+.quix-box .answers-indicator{
+    border-top: 1px solid #cccccc;
+}
+.quix-box .answers-indicator div{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result-box{
+    text-align: center;
+}
+.result-box h1{
+    font-size: 30px;
+    color: brown;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.result-box table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+.result-box table td{
+    border: 1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: black;
+    width: 50%;
+    text-align: left;
+}
+.quix-box .option-container .option.opcion-respondida{
+    pointer-events: none;
+}
+.quix-box .answers-indicator div.correcto{
+    background-color: green;
+    color: white;
+}
+.quix-box .answers-indicator div.incorrecto{
+    background-color: red;
+    color: white;
+}
+.quix-box .option-container .option.correcto{
+    background-color: green;
+    color: white;
+
+}
+.quix-box .option-container .option.incorrecto{
+    background-color: red;
+    color: white;
+    
+}

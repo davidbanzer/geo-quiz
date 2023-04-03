@@ -1,4 +1,4 @@
-# Geo Quiz
+# Geo Quiz Frontend
 Frontend del proyecto Geo Quiz. 
 
 Cuestionario de preguntas hecho con Angular implementando E2E testing con Cypress.

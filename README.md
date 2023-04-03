@@ -1,6 +1,6 @@
 # Geo Quiz
-Proyecto de la materia de Gamificación y Programación Funcional. 
-Cuestionario de preguntas hecho con Angular implementando e2e testing con Cypress.
+Frontend del proyecto GeoQuiz. 
+Cuestionario de preguntas hecho con Angular implementando E2E testing con Cypress.
 
 ## Pasos para instalar y ejecutar el proyecto
 Instalar las dependencias del proyecto
@@ -20,5 +20,7 @@ ng serve
 npm run cypress:open
 ```
 Seleccionar E2E Testing
+
 Seleccionar el navegador de preferencia y darle Start
+
 Ejecutar el testing que se desee

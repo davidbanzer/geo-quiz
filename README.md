@@ -12,7 +12,7 @@ Correr el proyecto
 ```
 ng serve -o
 ```
-## Pasos para ejecutar los e2e testing
+## Pasos para ejecutar los E2E testing
 Asegurarse de que se esté ejecutando el proyecto
 ```
 ng serve

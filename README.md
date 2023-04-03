@@ -1,5 +1,6 @@
 # Geo Quiz
 Frontend del proyecto GeoQuiz. 
+
 Cuestionario de preguntas hecho con Angular implementando E2E testing con Cypress.
 
 ## Pasos para instalar y ejecutar el proyecto
